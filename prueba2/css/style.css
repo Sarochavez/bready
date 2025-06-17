@@ -1,0 +1,159 @@
+:root{
+  --general-color: #666;
+  --title-color: #000;
+  --footer-bg: #22202e;
+  --footer-text: #CCC;
+--accent-gold: #e1bb61;
+}
+body {
+	font-size: 16px;
+	font-family: 'Lora', serif;
+	color: var(--color-general);
+	background: #fff;
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: #fff;
+	padding: 5px 0;
+	box-shadow: 0px 0px 5px 10px #f2f2f2;
+}
+
+.container, .container-fluid {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, .bready-title, .delicieux-title {
+	font-family: 'Kaushan Script', cursive;
+	color: var(--color-titulos);
+	margin-top: 0;
+}
+
+/* HERO */
+.hero { padding: 30px 0 10px 0; text-align: center; }
+.hero-sale {
+	position: absolute;
+	left: 80px; top: 20px;
+	background: var(--accent-gold);
+	color: #fff;
+	font-weight: bold; font-size: 1.2em;
+	border-radius: 50%;
+	padding: 16px 18px;
+}
+.hero-arrow {
+	position: absolute; top: 48%;
+	background: #fff; border: none;
+	color: var(--color-general);
+	font-size: 1.7em;
+	width: 34px; height: 34px;
+	border-radius: 50%; cursor: pointer;
+}
+.hero-arrow-left { left: 0; }
+.hero-arrow-right { right: 0; }
+.hero-img {
+	max-width: 500px; width: 100%; height: auto;
+	margin: 0 auto 10px auto; display: block;
+}
+.hero-order {
+	margin: 14px auto 0 auto;
+	padding: 8px 30px;
+	border: 1.5px solid var(--accent-gold);
+	background: #fff; color: var(--accent-gold);
+	border-radius: 20px; font-weight: bold;
+	cursor: pointer; transition: all 0.2s;
+}
+.hero-order:hover { background: var(--accent-gold); color: #fff; }
+
+/* DELICIEUX */
+.delicieux { text-align: center; margin: 40px 0 0 0; }
+.delicieux-title { font-size: 2em; margin-bottom: .2em; }
+.delicieux-cols { overflow: hidden; margin-top: 20px; }
+.delicieux-col {
+	float: left; width: 32%; margin-right: 2%;
+	box-sizing: border-box;
+	padding: 0 10px 15px 10px;
+	min-height: 240px;
+}
+.delicieux-col:last-child { margin-right: 0; }
+.delicieux-badge { margin: 14px auto 10px auto; display: block; height: 60px; }
+.delicieux-col h3 { font-family: 'Lora', serif; font-size: 1.05em; margin: 10px 0 8px 0; }
+.delicieux-col h3 span { color: var(--accent-gold); font-weight: normal; font-size: .95em; }
+.delicieux-col p { font-size: .99em; color: var(--color-general); margin: 0; }
+
+/* INTRO */
+.intro { margin: 35px 0 0 0; background: #fff; }
+.intro-container { overflow: hidden; min-height: 220px; }
+.intro-img-col {
+	float: left; width: 38%; text-align: center; margin-right: 4%;
+}
+.intro-img { max-width: 240px; width: 100%; margin-top: 10px; border-radius: 5px; }
+.intro-quote-col {
+	float: left; width: 58%; text-align: left; margin-top: 20px;
+}
+.intro-quote-col blockquote { border-left: 0; padding: 0; margin: 0; font-size: 1em; }
+.intro-quote-col footer { margin-top: 14px; color: var(--accent-gold); font-family: 'Lora', serif; font-size: .97em; }
+.sign { font-family: 'Kaushan Script', cursive; color: var(--accent-gold); font-size: 1.2em; }
+
+
+footer #copyright{
+	background-color: #000;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.custom-footer {
+	background: var(--footer-bg);
+	color: var(--footer-text);
+	padding: 40px 0 24px 0;
+	overflow: hidden;
+	border-radius: 10px 10px 0 0;
+	margin-top: 40px;
+	min-height: 200px;
+}
+.footer-logo-col, .footer-contact-col, .footer-hours-col {
+	float: left;
+	width: 32%;
+	margin-right: 2%;
+}
+.footer-logo-col { text-align: left; }
+.footer-contact-col { text-align: center; }
+.footer-hours-col { text-align: right; }
+.custom-footer > div:last-child { margin-right: 0; }
+.footer-logo { height: 52px; margin-bottom: 10px; }
+.footer-social a {
+	color: var(--footer-text);
+	padding: 0 7px;
+	font-size: 1.25em;
+	display: inline-block;
+	margin-top: 10px;
+}
+.footer-social a:hover { color: var(--accent-gold); }
+.footer-payments img {
+	margin: 0 5px;
+	vertical-align: middle;
+}
+footer #copyright{
+	background-color: #000;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	margin: 0;
+	letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+	.delicieux-col, .footer-logo-col, .footer-contact-col, .footer-hours-col,
+	.intro-img-col, .intro-quote-col {
+		width: 100%; margin-right: 0; margin-bottom: 10px; float: none; text-align: center !important;
+	}
+	.intro-quote-col blockquote { font-size: .98em; }
+}
+@media (max-width: 600px) {
+	.hero-sale { left: 50%; transform: translateX(-50%); top: 10px; }
+	.hero-img { max-width: 98vw; }
+	.delicieux, .intro, .custom-footer, .container { padding-left: 6px; padding-right: 6px; }
+	.custom-footer { padding: 15px 0 6px 0; }
+}
